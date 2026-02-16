@@ -1,0 +1,254 @@
+/* Updated Login.css */
+.login-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("../Assets/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+/* Add overlay for better readability */
+.login-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Darker overlay for better contrast */
+  z-index: 1;
+}
+
+.login-container {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 2; /* Above the overlay */
+}
+
+.user-login {
+  max-width: 500px;
+  width: 100%;
+  padding: 40px;
+  background: transparent;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  font-family: Arial, sans-serif;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-login h2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-size: 28px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.form-input::placeholder {
+  color: rgba(3, 3, 3, 0.831);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.otp-button,
+.verify-button,
+.resend-button,
+.capture-button,
+.admin-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.otp-button {
+  background: rgba(52, 152, 219, 0.8);
+  color: white;
+}
+
+.otp-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(52, 152, 219, 0.4);
+  background: rgba(52, 152, 219, 0.9);
+}
+
+.verify-button {
+  background: rgba(39, 174, 96, 0.8);
+  color: white;
+}
+
+.verify-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(39, 174, 96, 0.4);
+  background: rgba(39, 174, 96, 0.9);
+}
+
+.resend-button {
+  background: rgba(243, 156, 18, 0.8);
+  color: white;
+}
+
+.resend-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(243, 156, 18, 0.4);
+  background: rgba(243, 156, 18, 0.9);
+}
+
+.capture-button {
+  background: rgba(231, 76, 60, 0.8);
+  color: white;
+}
+
+.capture-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(231, 76, 60, 0.4);
+  background: rgba(231, 76, 60, 0.9);
+}
+
+.admin-btn {
+  background: rgba(155, 89, 182, 0.8);
+  color: white;
+}
+
+.admin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(155, 89, 182, 0.4);
+  background: rgba(155, 89, 182, 0.9);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.button-group button {
+  flex: 1;
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgba(250, 219, 216, 0.9);
+  border-radius: 8px;
+  text-align: center;
+  border-left: 4px solid #e74c3c;
+  font-weight: 600;
+  backdrop-filter: blur(5px);
+}
+
+.success-message {
+  color: #27ae60;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgba(213, 245, 227, 0.9);
+  border-radius: 8px;
+  text-align: center;
+  border-left: 4px solid #27ae60;
+  font-weight: 600;
+  animation: fadeIn 0.5s ease-in;
+  backdrop-filter: blur(5px);
+}
+
+#recaptcha-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.webcam-section {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.webcam-section h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fingerprint-section {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fingerprint-section h4 {
+  margin: 0 0 10px 0;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .user-login {
+    padding: 30px 20px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .webcam-section {
+    margin-top: 20px;
+    padding-top: 15px;
+  }
+
+  .login-background {
+    padding: 10px;
+  }
+
+  .user-login h2 {
+    font-size: 24px;
+  }
+}
